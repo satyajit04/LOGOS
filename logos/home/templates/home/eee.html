@@ -1,0 +1,132 @@
+{% extends 'home/index.html' %}
+{% block title %}Logos | Strategy & Consultancy{% endblock %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/bootsnav.css' %}">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=El Messiri"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Saira Semi Condensed"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"/>
+    <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Satisfy">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/contact_style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/font-icon.css' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{%  static 'home/images/logo-final.png' %}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="{% static 'home/js/bootsnav.js' %}"></script>
+    <style>
+        .caption{
+            padding: 17px 10px;
+            background: #d2d2da;
+            position: relative;
+            text-align: center;
+            text-transform: capitalize;
+            color: #23272a;
+            font-family: Saira Semi Condensed;
+            font-size: 24px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body style="background: #ffffff;">
+    <header>
+        <div class="container-fluid" style="padding: 0;">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{% url 'home:index' %}">
+                            <img class="" src="{% static 'home/images/finallogo.png' %}" alt="">
+                        </a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                            <span class="icon-bar" style="background: #ffffff;"></span>
+                            <span class="icon-bar" style="background: #ffffff;"></span>
+                            <span class="icon-bar" style="background: #ffffff;"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="topNavBar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="{% block Home %}{% endblock %}">
+                                <a href="/home" class="scroll">HOME</a>
+                            </li>
+                            <!--<li class="{% block product %}{% endblock %}">
+                                <a href="#item1" class="">ITEM 1</a>
+                            </li>
+                            <li><a href="#item2" class="">SERVICES</a></li>
+                            <li><a href="#item3" class="">ITEM 3</a></li>-->
+                            <li><a href="/contact_us" class="">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div style="height: 90px;"></div>
+    <div class="container">
+        <h1>R.I.P Insect Killer</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="{% static 'home/images/rip-2.jpg' %}">
+            </div>
+            <div class="col-md-12" style="padding-left: 20px;">
+                <h2 style="text-decoration: underline;">FEATURES</h2>
+                <h4><dl style="text-align: justify">
+                    <li>Black UV Light Technology.</li>&nbsp;
+                    <li>Attracts & Kills Flying Insects: The Ultraviolet (UV) light given off by this unit is within the luminescent range proven effective to lure flying insects.
+                        The &nbsp; &nbsp; &nbsp; &nbsp; UV light attracts flying insects and lures them to the electric grid where they are electrocuted.</li>&nbsp;
+                    <li>Up to 500 square feet coverage.</li>&nbsp;
+                    <li>Easy-open front cover for bulb replacement and maintenance.</li>&nbsp;
+                    <li>Both outdoor and indoor use.</li>&nbsp;
+                    <li>2,000 volts zapping power.</li>&nbsp;
+                    <li>Simple plug & go operation.</li>&nbsp;
+                </dl></h4>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-5" style="padding-top: 50px;">
+                        <p>Copyright &copy; 2017 | LOGOS</p>
+                        <p>Privacy Policy</p>
+                        <p><a href="/contact_us">Contact Us</a></p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h5>Services We Offer</h5>
+                        <p>
+                        <ul>
+                        <li><a href="{% url 'home:strategy' %}">Strategy & Consultancy</a></li>
+                        <li><a href="#">IT Solutions & Services</a></li>
+                        <li><a href="{% url 'home:eee' %}">Electrical & Electronics</a></li>
+                        <li><a href="{% url 'home:jute_products' %}">Jute Products</a></li>
+                        <li><a href="#">Sanitary Products</a></li>
+                        <li><a href="#">Others</a></li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="footer-col col-md-3">
+                        <h5>&nbsp;&nbsp;&nbsp;Share With Love</h5>
+                        <ul class="footer-share">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+{% endblock %}

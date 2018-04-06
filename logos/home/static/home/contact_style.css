@@ -1,0 +1,114 @@
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	list-style: none;
+}
+h1, .h1{
+    font-family: Saira Semi Condensed;
+}
+h2, .h2{
+    font-family: Saira Semi Condensed;
+}
+h3, .h3{
+    font-family: Saira Semi Condensed;
+}
+h4, .h4{
+    font-family: Saira Semi Condensed;
+}
+h5, .h5{
+    font-family: Saira Semi Condensed;
+}
+h6, .h6{
+    font-family: Saira Semi Condensed;
+}
+.navbar {
+    border-bottom: 0px;
+    /*border-radius: 0;*/
+}
+.navbar-default {
+    background-color: #010101;
+    height: 90px;
+    /*transition: all 0.4s ease;*/
+}
+.navbar-default.past-main{
+    padding-top: 0px;
+    height: 90px;                                       /*for products*/
+    background-color: #010101;
+    transition: 1s ease;
+}
+.navbar-default .navbar-nav > li > a{
+    padding-top: 33px;
+    color: #ffffff;                                                             /*#737373;*/
+    height: 66px;
+    font-family: Saira Semi Condensed;                      #Robot
+    font-weight: bold;
+    font-size: 15px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #e84545;                                     /*    #707faa;#27ace4     */
+    /*border-bottom: 4px solid #707faa;*/
+    transition: all 0.3s ease-in;
+}
+.navbar-default .navbar-nav > .active > a{
+    height: 66px;
+    color: #46c5e2;                                 /*    #e9e9ed#707faa;;    */
+    background: inherit;
+    /*border-bottom: 4px solid #707faa;*/
+}
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #414a63;                                 /*    #a9a9ad;    */
+    /*border-bottom: 4px solid #414a63;      */         /*    #707faa;    */
+    background-color: inherit;                      /*    #707faa;    */
+}
+
+.footer {
+	text-align: left;
+}
+.footer-top {
+	background-color: #181818;
+	padding-top: 50px;
+}
+.footer-bottom {
+	background-color: #313454;
+	padding: 20px 0;
+}
+.footer .footer-col {
+	margin-bottom: 30px;
+}
+.footer h5 {
+	color: #fff;
+}
+.footer h5 {
+	margin-bottom: 20px;
+}
+.footer p {
+	color: rgba(255, 255, 255, 0.50);
+}
+.footer a {
+	color: rgba(255, 255, 255, 0.50);
+}
+.footer a:hover {
+	color: #e84545;
+	text-decoration: none;
+}
+.footer .footer-share {
+	margin-top: 0;
+}
+.footer .footer-share li {
+	display: inline-block;
+	float: none;
+}
+.footer .footer-share a {
+	border: none;
+	font-size: 21px;
+	color: rgba(255, 255, 255, 0.25);
+}
+.footer .fa-heart {
+	color: #e84545;
+	font-size: 11px;
+	margin: 0 2px;
+}

@@ -1,0 +1,160 @@
+{% extends 'home/index.html' %}
+{% block title %}Logos | Contact Us{% endblock %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/bootsnav.css' %}">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=El Messiri"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Saira Semi Condensed"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"/>
+    <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Satisfy">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/contact_style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/font-icon.css' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{%  static 'home/images/logo-final.png' %}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="{% static 'home/js/bootsnav.js' %}"></script>
+
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .contact{
+            display: flex;
+        }
+
+        .contact > i {
+            display: inline-flex;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container-fluid" style="padding: 0;">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'home:index' %}">
+                        <img class="" src="{% static 'home/images/finallogo.png' %}" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                        <span class="icon-bar" style="background: #ffffff;"></span>
+                        <span class="icon-bar" style="background: #ffffff;"></span>
+                        <span class="icon-bar" style="background: #ffffff;"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="topNavBar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="{% block Home %}{% endblock %}">
+                            <a href="/home" class="scroll">HOME</a>
+                        </li>
+                        <!--<li class="{% block product %}{% endblock %}">
+                            <a href="#item1" class="">ITEM 1</a>
+                        </li>
+                        <li><a href="#item2" class="">SERVICES</a></li>
+                        <li><a href="#item3" class="">ITEM 3</a></li>-->
+                        <li><a href="/contact_us" class="">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div style="height: 90px;"></div>
+<div style="">
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 5px; margin-bottom: 25px;">
+            <div class="col-md-offset-2 col-md-10" style="padding-left: 70px;">
+                <h1>Contact Us</h1>
+                <div class="contact" style="margin-top: 20px;">
+                    <i class="fa fa-phone" style="font: normal normal normal 18px/1 FontAwesome;"></i>
+                    <span style="padding-left: 18px; font-family: Saira Semi Condensed; font-size: 18px;">(+88) 02 9614163</span>
+                </div>
+                <div class="contact" style="margin-top: 10px;">
+                    <i class="fa fa-envelope-o" style="font: normal normal normal 18px/1 FontAwesome;"></i>
+                    <span style="padding-left: 18px; font-family: Saira Semi Condensed; font-size: 18px;">info@logosbd.org</span>
+                </div>
+                <div class="contact" style="margin-top: 10px;">
+                    <i class="fa fa-map-marker" style="font: normal normal normal 18px/1 FontAwesome;"></i>
+                    <span style="padding-left: 18px; font-family: Saira Semi Condensed; font-size: 18px;">Flat C-7(button no. 8 of lift),House 02, Road 07 Rupayan Prime, Green Road, Dhanmondi, Dhaka, Bangladesh</span>
+                </div>
+                <div class="contact" style="margin-top: 10px;">
+                    <a href="https://www.facebook.com/rethinkbangladesh/"><i class="fa fa-facebook" style="font: normal normal normal 18px/1 FontAwesome;"></i>
+                    <span style="padding-left: 15px; font-family: Saira Semi Condensed; font-size: 18px;">www.facebook.com/rethinkbangladesh</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="border-top: 1px solid #886b6b;">          <!--#574949-->
+                <div id="map"></div>
+                <script>
+                    function initMap() {
+                        var uluru = {lat: 23.745571, lng: 90.384882};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 17,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U&callback=initMap">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-5" style="padding-top: 50px;">
+                    <p>Copyright &copy; 2017 | LOGOS</p>
+                    <p>Privacy Policy</p>
+                    <p><a href="/contact_us">Contact Us</a></p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h5>Services We Offer</h5>
+                    <p>
+                    <ul>
+                    <li><a href="{% url 'home:strategy' %}">Strategy & Consultancy</a></li>
+                    <li><a href="#">IT Solutions & Services</a></li>
+                    <li><a href="{% url 'home:eee' %}">Electrical & Electronics</a></li>
+                    <li><a href="{% url 'home:jute_products' %}">Jute Products</a></li>
+                    <li><a href="#">Sanitary Products</a></li>
+                    <li><a href="#">Others</a></li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="footer-col col-md-3">
+                    <h5>&nbsp;&nbsp;&nbsp;Share With Love</h5>
+                    <ul class="footer-share">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'home/index.html' %}
+{% block title %}Logos | Strategy & Consultancy{% endblock %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/bootsnav.css' %}">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=El Messiri"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Saira Semi Condensed"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"/>
+    <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Satisfy">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/contact_style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/font-icon.css' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{%  static 'home/images/logo-final.png' %}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="{% static 'home/js/bootsnav.js' %}"></script>
+    <style>
+        .caption{
+            padding: 17px 10px;
+            background: #d2d2da;
+            position: relative;
+            text-align: center;
+            text-transform: capitalize;
+            color: #23272a;
+            font-family: Saira Semi Condensed;
+            font-size: 24px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body style="background: #ffffff;">
+    <header>
+        <div class="container-fluid" style="padding: 0;">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{% url 'home:index' %}">
+                            <img class="" src="{% static 'home/images/finallogo.png' %}" alt="">
+                        </a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                            <span class="icon-bar" style="background: #ffffff;"></span>
+                            <span class="icon-bar" style="background: #ffffff;"></span>
+                            <span class="icon-bar" style="background: #ffffff;"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="topNavBar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="{% block Home %}{% endblock %}">
+                                <a href="/home" class="scroll">HOME</a>
+                            </li>
+                            <!--<li class="{% block product %}{% endblock %}">
+                                <a href="#item1" class="">ITEM 1</a>
+                            </li>
+                            <li><a href="#item2" class="">SERVICES</a></li>
+                            <li><a href="#item3" class="">ITEM 3</a></li>-->
+                            <li><a href="/contact_us" class="">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div style="height: 130px;"></div>
+    <div class="container" style="height: 42em;">
+        <!--<span class="glyphicon glyphicon-knight" style="padding-left: 40px; font-size: 5em; color: #000;"></span>-->
+        <div style="padding-left: 25px;"><img src="{% static 'home/images/Strategy-Black-1.gif' %}"></div>
+        <h1>Strategy & Consultancy</h1><br>
+        <h4><dl>
+            <li>Professional services in management consulting,</li>
+            <li>Analysis and research (both quantitative and qualitative),</li>
+            <li>Monitoring & evaluation studies,</li>
+            <li>Investment feasibility studies,</li>
+            <li>Communication and training etc</li>
+        </dl></h4>
+        <br>
+        <h3>We have strong background and skills in the areas like project management, policy analysis, sector analysis and program based study/research, survey team, evaluation and situation analysis technique.</h3>
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-5" style="padding-top: 50px;">
+                        <p>Copyright &copy; 2017 | LOGOS</p>
+                        <p>Privacy Policy</p>
+                        <p><a href="/contact_us">Contact Us</a></p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h5>Services We Offer</h5>
+                        <p>
+                        <ul>
+                        <li><a href="{% url 'home:strategy' %}">Strategy & Consultancy</a></li>
+                        <li><a href="#">IT Solutions & Services</a></li>
+                        <li><a href="{% url 'home:eee' %}">Electrical & Electronics</a></li>
+                        <li><a href="{% url 'home:jute_products' %}">Jute Products</a></li>
+                        <li><a href="#">Sanitary Products</a></li>
+                        <li><a href="#">Others</a></li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="footer-col col-md-3">
+                        <h5>&nbsp;&nbsp;&nbsp;Share With Love</h5>
+                        <ul class="footer-share">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+{% endblock %}
